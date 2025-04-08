@@ -7,7 +7,7 @@ public class Beginner extends Player {
     }
     
     @Override
-    protected int calAtkWeight(int damage) {
+    protected int calClassWeight(int damage) {
         return (int) (damage * 1.1);
     }
     

@@ -1,7 +1,6 @@
 package strategy.character;
 
 import java.util.Random;
-import strategy.weapon.Weapon;
 
 public abstract class AbstractCharacter implements Character {
     
@@ -10,7 +9,6 @@ public abstract class AbstractCharacter implements Character {
     private int currentHp;
     private int atk;
     private int def;
-    protected Weapon weapon;
     
     public AbstractCharacter(String name, int hp, int atk, int def) {
         this.name = name;
@@ -25,12 +23,6 @@ public abstract class AbstractCharacter implements Character {
         Random random = new Random();
         int damage = random.nextInt(atk/2, atk*2);
         damage = calAtkWeight(damage);
-        
-        if(weapon != null){
-            damage = weapon.calcWeaponWeight(damage);
-            weapon.attack();
-        }
-
         target.takeDamage(damage);
     }
     
