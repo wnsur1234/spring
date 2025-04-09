@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74bcf7d0-3212-407c-9a14-4227d134aee8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/a_regist/a_xml/bean/Run.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/a_regist/a_xml/cheatsheet/CheatSheet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/a_regist/a_xml/cheatsheet/Run.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/a_regist/a_xml/cheatsheet/Score.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/a_regist/a_xml/cheatsheet/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/regist/xml/cheatsheet/application-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/a_regist/b_annotation/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/a_regist/b_annotation/component/Developer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/a_regist/b_annotation/component/JdbcProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/a_regist/b_annotation/component/JdbcTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/a_regist/b_annotation/component/Run.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/a_regist/b_annotation/configuration/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/a_regist/b_annotation/configuration/Run.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/regist/annotation/component/application-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/regist/annotation/configuration/application-context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/a_regist/a_xml/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/a_regist/a_xml/bean/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/a_regist/a_xml/Run.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/regist/xml/application-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regist/xml/bean/application-context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Measurable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Measurable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/PerformanceMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/PerformanceMonitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Run.java" afterDir="false" />
@@ -28,9 +27,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="spring-beans.schema" />
         <option value="Enum" />
         <option value="spring-config" />
+        <option value="package-info" />
+        <option value="spring-beans.schema" />
         <option value="Class" />
       </list>
     </option>
@@ -53,12 +53,14 @@
   "keyToString": {
     "Application.Run.executor": "Run",
     "Application.a_regist.a_xml.cheatsheet.Run.executor": "Run",
+    "Application.a_regist.b_annotation.component.Run.executor": "Run",
+    "Application.a_regist.b_annotation.configuration.Run.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/backend/f_spring/spring-core/src/main/resources/regist/xml/bean",
+    "last_opened_file_path": "C:/backend/f_spring/spring-core/src/main/resources/regist/annotation/configuration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,14 +75,19 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\backend\f_spring\spring-core\src\main\resources\regist\annotation\configuration" />
       <recent name="C:\backend\f_spring\spring-core\src\main\resources\regist\xml\bean" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\backend\f_spring\spring-core\src\main\resources\regist\xml\bean" />
       <recent name="C:\backend\f_spring\spring-core\src\main\resources\regist\xml" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="a_regist.b_annotation.configuration" />
+      <recent name="a_regist.b_annotation" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.a_regist.a_xml.cheatsheet.Run">
+  <component name="RunManager" selected="Application.a_regist.b_annotation.configuration.Run">
     <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="a_regist.a_xml.bean.Run" />
       <module name="spring-core" />
@@ -107,8 +114,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="a_regist.b_annotation.component.Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="a_regist.b_annotation.component.Run" />
+      <module name="spring-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="a_regist.b_annotation.component.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="a_regist.b_annotation.configuration.Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="a_regist.b_annotation.configuration.Run" />
+      <module name="spring-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="a_regist.b_annotation.configuration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.a_regist.b_annotation.configuration.Run" />
+        <item itemvalue="Application.a_regist.b_annotation.component.Run" />
         <item itemvalue="Application.a_regist.a_xml.cheatsheet.Run" />
         <item itemvalue="Application.Run" />
       </list>
@@ -135,6 +170,7 @@
       <workItem from="1744098363759" duration="21000" />
       <workItem from="1744119975651" duration="348000" />
       <workItem from="1744156724563" duration="3440000" />
+      <workItem from="1744160259464" duration="2127000" />
     </task>
     <servers />
   </component>
