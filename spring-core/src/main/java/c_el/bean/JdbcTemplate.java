@@ -1,4 +1,4 @@
-package b_inject.b_construtor;
+package c_el.bean;
 
 import org.springframework.stereotype.Component;
 
