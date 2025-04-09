@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74bcf7d0-3212-407c-9a14-4227d134aee8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/B_Operator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/C_BeanRef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/D_Method.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/E_Properties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_designpattern/src/proxy/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_designpattern/src/proxy/Man.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_designpattern/src/proxy/Run.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_designpattern/src/proxy/Woman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/c_el/A_Literal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/c_el/A_Literal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/c_el/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/c_el/Run.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/c_el/bean/TransactionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/c_el/bean/TransactionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Measurable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Measurable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/PerformanceMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/PerformanceMonitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Run.java" afterDir="false" />
@@ -62,7 +69,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "fileTemplates",
@@ -186,7 +193,8 @@
       <workItem from="1744098363759" duration="21000" />
       <workItem from="1744119975651" duration="348000" />
       <workItem from="1744156724563" duration="3440000" />
-      <workItem from="1744160259464" duration="5812000" />
+      <workItem from="1744160259464" duration="7069000" />
+      <workItem from="1744168318269" duration="1828000" />
     </task>
     <servers />
   </component>
