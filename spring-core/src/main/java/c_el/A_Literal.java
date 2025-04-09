@@ -10,10 +10,26 @@ public class A_Literal {
     @Value("#{'Hello Spring EL'}")
     private String message;
     
+    @Value("#{100}")
+    private int number;
+
+    @Value("#{3.14}")
+    private double pie;
+    
+    @Value("#{true}")
+    private boolean activated;
+    
+    @Value("#{null}")
+    private Object nullValue;
+    
     @Override
     public String toString() {
         return "A_Literal{" +
                    "message='" + message + '\'' +
+                   ", number=" + number +
+                   ", pie=" + pie +
+                   ", activated=" + activated +
+                   ", nullValue=" + nullValue +
                    '}';
     }
 }

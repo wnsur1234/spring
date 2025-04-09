@@ -12,5 +12,8 @@ public class Run {
         
         A_Literal aLiteral = context.getBean("a_Literal", A_Literal.class);
         System.out.println(aLiteral);
+        System.out.println("==================================");
+        B_Operator operator = context.getBean("b_Operator", B_Operator.class);
+        System.out.println(operator);
     }
 }

@@ -5,25 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74bcf7d0-3212-407c-9a14-4227d134aee8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/b_inject/a_autowired/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/b_inject/a_autowired/Run.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/b_inject/a_autowired/TransactionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/b_inject/b_constructor/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/b_inject/b_constructor/JdbcTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/b_inject/b_constructor/Run.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/b_inject/b_constructor/TransactionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/A_Literal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/Run.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/bean/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/bean/JdbcProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/bean/TransactionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/el/application-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/inject/autowired/application-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/inject/constructor/application-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/B_Operator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/b_inject/a_autowired/JdbcTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/b_inject/a_autowired/JdbcTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/b_inject/b_construtor/JdbcProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/b_inject/b_constructor/JdbcProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/b_inject/b_construtor/JdbcTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/c_el/bean/JdbcTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/c_el/A_Literal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/c_el/A_Literal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/c_el/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/c_el/Run.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Measurable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Measurable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/PerformanceMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/PerformanceMonitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Run.java" afterDir="false" />
@@ -201,7 +186,7 @@
       <workItem from="1744098363759" duration="21000" />
       <workItem from="1744119975651" duration="348000" />
       <workItem from="1744156724563" duration="3440000" />
-      <workItem from="1744160259464" duration="5336000" />
+      <workItem from="1744160259464" duration="5812000" />
     </task>
     <servers />
   </component>
