@@ -5,20 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74bcf7d0-3212-407c-9a14-4227d134aee8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/C_BeanRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/D_Method.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/c_el/E_Properties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_designpattern/src/proxy/Child.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_designpattern/src/proxy/Man.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_designpattern/src/proxy/Run.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_designpattern/src/proxy/Woman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/d_aop/a_interceptor/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/d_aop/a_interceptor/Developer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/d_aop/a_interceptor/Man.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/d_aop/a_interceptor/Run.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/d_aop/a_interceptor/Woman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/d_aop/a_interceptor/_Advice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/d_aop/b_autoproxy/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/d_aop/b_autoproxy/Man.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/d_aop/b_autoproxy/Run.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/d_aop/b_autoproxy/Woman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/d_aop/b_autoproxy/_Aspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/aop/autoproxy/application-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/aop/interceptor/application-context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/c_el/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/c_el/Run.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/c_el/bean/TransactionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/c_el/bean/TransactionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Measurable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Measurable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/PerformanceMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/PerformanceMonitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_designpattern/src/templatecallback/Run.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +59,15 @@
     "Application.a_regist.b_annotation.configuration.Run.executor": "Run",
     "Application.b_inject.a_autowired.Run.executor": "Run",
     "Application.b_inject.b_constructor.Run.executor": "Run",
+    "Application.d_aop.a_interceptor.Run.executor": "Run",
+    "Application.d_aop.b_autoproxy.Run.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.spring-core [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/backend/f_spring/spring-core/src/main/resources/el",
+    "last_opened_file_path": "C:/backend/f_spring/spring-core/src/main/resources/aop/autoproxy",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,11 +82,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\backend\f_spring\spring-core\src\main\resources\aop\autoproxy" />
+      <recent name="C:\backend\f_spring\spring-core\src\main\java\d_aop\b_autoproxy" />
+      <recent name="C:\backend\f_spring\spring-core\src\main\resources\aop\interceptor" />
+      <recent name="C:\backend\f_spring\spring-core\src\main\java\d_aop\a_interceptor" />
       <recent name="C:\backend\f_spring\spring-core\src\main\resources\el" />
-      <recent name="C:\backend\f_spring\spring-core\src\main\resources\inject\constructor" />
-      <recent name="C:\backend\f_spring\spring-core\src\main\resources\inject\autowired" />
-      <recent name="C:\backend\f_spring\spring-core\src\main\java\b_inject\b_construtor" />
-      <recent name="C:\backend\f_spring\spring-core\src\main\java\b_inject\a_autowired" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\backend\f_spring\spring-core\src\main\resources\regist\xml\bean" />
@@ -96,39 +100,13 @@
       <recent name="a_regist.b_annotation" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Run">
+  <component name="RunManager" selected="Application.d_aop.b_autoproxy.Run">
     <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="c_el.Run" />
       <module name="spring-core" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="c_el.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="a_regist.b_annotation.component.Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="a_regist.b_annotation.component.Run" />
-      <module name="spring-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="a_regist.b_annotation.component.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="a_regist.b_annotation.configuration.Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="a_regist.b_annotation.configuration.Run" />
-      <module name="spring-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="a_regist.b_annotation.configuration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,13 +140,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="d_aop.a_interceptor.Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="d_aop.a_interceptor.Run" />
+      <module name="spring-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="d_aop.a_interceptor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="d_aop.b_autoproxy.Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="d_aop.b_autoproxy.Run" />
+      <module name="spring-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="d_aop.b_autoproxy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.d_aop.b_autoproxy.Run" />
+        <item itemvalue="Application.d_aop.a_interceptor.Run" />
         <item itemvalue="Application.Run" />
         <item itemvalue="Application.b_inject.b_constructor.Run" />
         <item itemvalue="Application.b_inject.a_autowired.Run" />
-        <item itemvalue="Application.a_regist.b_annotation.configuration.Run" />
-        <item itemvalue="Application.a_regist.b_annotation.component.Run" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +198,7 @@
       <workItem from="1744119975651" duration="348000" />
       <workItem from="1744156724563" duration="3440000" />
       <workItem from="1744160259464" duration="7069000" />
-      <workItem from="1744168318269" duration="1828000" />
+      <workItem from="1744168318269" duration="5772000" />
     </task>
     <servers />
   </component>
