@@ -10,11 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba92b22e-5fa2-4a2d-8345-ba8762662edc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/infra/error/WebExceptionAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/infra/error/exceptions/CommonException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/infra/error/exceptions/WebException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/infra/response/ResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/controller/api/RestApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/controller/api/form/RestForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/controller/api/payload/RestPayload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/infra/config/JacksonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/error/redirect.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-core/src/main/java/b_inject/a_autowired/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core/src/main/java/b_inject/a_autowired/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-core/src/main/java/b_inject/a_autowired/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core/src/main/java/b_inject/a_autowired/Run.java" afterDir="false" />
@@ -22,9 +22,10 @@
       <change beforePath="$PROJECT_DIR$/../spring-core/src/main/java/b_inject/b_constructor/JdbcTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core/src/main/java/b_inject/b_constructor/JdbcTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-core/src/main/java/b_inject/b_constructor/TransactionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core/src/main/java/b_inject/b_constructor/TransactionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/controller/web/urlencoded/UrlEncodedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/controller/web/urlencoded/UrlEncodedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/controller/web/urlencoded/validator/UrlEncodedValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/controller/web/urlencoded/validator/UrlEncodedValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/spring/session.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/spring/session.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/grepp/spring/infra/error/WebExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/infra/error/WebExceptionAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,8 @@
       <list>
         <option value="lec-jsp" />
         <option value="Enum" />
+        <option value="Jsp File" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -220,7 +223,8 @@
       <workItem from="1744243303875" duration="398000" />
       <workItem from="1744243716347" duration="14430000" />
       <workItem from="1744259635483" duration="1232000" />
-      <workItem from="1744261885799" duration="2331000" />
+      <workItem from="1744261885799" duration="6128000" />
+      <workItem from="1744268032444" duration="958000" />
     </task>
     <servers />
   </component>
