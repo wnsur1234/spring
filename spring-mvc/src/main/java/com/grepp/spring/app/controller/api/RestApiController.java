@@ -20,9 +20,7 @@ public class RestApiController {
     // content-type : application/json
     @GetMapping("test")
     //@ResponseBody
-    public RestPayload test(
-        @RequestBody
-        RestForm form){
+    public RestPayload test(RestForm form){
         log.info("form : {}", form);
         OffsetDateTime now = OffsetDateTime.now();
         return new RestPayload(1, "aaa@aaa.com", now, now.toEpochSecond());
