@@ -10,9 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba92b22e-5fa2-4a2d-8345-ba8762662edc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/model/urlencoded/dto/UrlEncodedDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/spring/cookie.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/spring/session.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/controller/web/urlencoded/validator/UrlEncodedValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-core/src/main/java/b_inject/a_autowired/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core/src/main/java/b_inject/a_autowired/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-core/src/main/java/b_inject/a_autowired/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-core/src/main/java/b_inject/a_autowired/Run.java" afterDir="false" />
@@ -22,7 +21,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/controller/web/urlencoded/UrlEncodedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/controller/web/urlencoded/UrlEncodedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/spring/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/spring/result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/controller/web/urlencoded/form/UrlEncodedForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/grepp/spring/app/controller/web/urlencoded/form/UrlEncodedForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/include/page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/include/page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/spring/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/spring/form.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="lec-jsp" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -215,7 +216,7 @@
       <workItem from="1744209099543" duration="32000" />
       <workItem from="1744209758387" duration="143000" />
       <workItem from="1744243303875" duration="398000" />
-      <workItem from="1744243716347" duration="9855000" />
+      <workItem from="1744243716347" duration="13017000" />
     </task>
     <servers />
   </component>

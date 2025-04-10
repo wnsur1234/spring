@@ -5,12 +5,14 @@ import com.grepp.spring.app.model.urlencoded.dto.UrlEncodedDto;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
 import java.time.LocalDateTime;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,7 +28,7 @@ import org.springframework.web.servlet.ModelAndView;
 // 4. @RequestParam : format 이 x-www-form-urlEncoded 인 요청파라미터를
 //                    Controller 의 매개변수에 매핑
 // 5. @ModelAttribute : 요청파라미터를 메서드의 매개변수에 선언한 Form 객체에 매핑
-//                    Model객체의 attribute에 Form 객체를 자동으로 추가
+//                    Model 객체의 attribute 에 Form 객체를 자동으로 추가
 @Controller
 @RequestMapping("form")
 @Slf4j
@@ -42,7 +44,7 @@ public class UrlEncodedController {
     //        model : Controller 에서 view 로 전달할 데이터를 저장하는 객체
     //        view  : view 의 경로
     @GetMapping
-    public String form(){
+    public String form(UrlEncodedForm form){
         log.debug("form  메서드");
         // forward
         return "spring/form";
@@ -51,10 +53,18 @@ public class UrlEncodedController {
     @PostMapping
     public String form(
         // 암묵적인 @ModelAttribute
+        @Valid
         UrlEncodedForm form,
+        BindingResult bindingResult,
         Model model){
+        
         log.info("model : {}", model);
         log.info("form : {}" , form);
+        log.info("bindingResult : {}" , bindingResult);
+        
+        if (bindingResult.hasErrors()) {
+            return "spring/form";
+        }
         
         UrlEncodedDto dto = new UrlEncodedDto(
             form.getUserId(),
