@@ -1,14 +1,23 @@
 package com.grepp.spring.app.controller.web.urlencoded;
 
 import com.grepp.spring.app.controller.web.urlencoded.form.UrlEncodedForm;
+import com.grepp.spring.app.model.urlencoded.dto.UrlEncodedDto;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import java.time.LocalDateTime;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.servlet.ModelAndView;
 
 // NOTE 01 @Controller
 // 1. 해당 클래스를 bean으로 등록
@@ -41,15 +50,76 @@ public class UrlEncodedController {
     
     @PostMapping
     public String form(
-        UrlEncodedForm form,
         // 암묵적인 @ModelAttribute
+        UrlEncodedForm form,
         Model model){
         log.info("model : {}", model);
         log.info("form : {}" , form);
-        model.addAttribute("payload", form);
+        
+        UrlEncodedDto dto = new UrlEncodedDto(
+            form.getUserId(),
+            form.getEmail(),
+            form.getTel());
+        
+        model.addAttribute("dto", dto);
         return "spring/result";
     }
     
+    @PostMapping("modelandview")
+    public ModelAndView modelAndView(UrlEncodedForm form){
+        ModelAndView mav = new ModelAndView();
+        
+        UrlEncodedDto dto = new UrlEncodedDto(
+            form.getUserId(),
+            form.getEmail(),
+            form.getTel());
+        
+        mav.addObject("dto", dto);
+        mav.setViewName("spring/result");
+        return mav;
+    }
+    
+    // NOTE 03 : @PathVariable
+    @PostMapping("path/{id}")
+    public String pathVariable(
+        @PathVariable()
+        String id,
+        @RequestParam
+        String email,
+        String tel,
+        LocalDateTime createdAt,
+        Model model
+    ){
+        log.info("createdAt : {} ",  createdAt);
+        model.addAttribute("dto",
+            new UrlEncodedDto(id, email, tel));
+        return "spring/result";
+    }
+    
+    @PostMapping("session/regist")
+    public String registSession(
+        UrlEncodedForm form,
+        HttpSession session
+    ){
+        session.setAttribute("principal", form);
+        return "redirect:/form/session/result";
+    }
+    
+    @GetMapping("session/result")
+    public String sessionResult(
+        @SessionAttribute(name = "principal")
+        UrlEncodedForm principal
+    ){
+        log.info("sessionAttribute : {}", principal);
+        return "spring/session";
+    }
+    
+    @GetMapping("cookie/regist")
+    public String registCookie(HttpServletResponse response){
+        Cookie cookie = new Cookie("server_cookie", "this_is_server_cookie");
+        response.addCookie(cookie);
+        return "spring/cookie";
+    }
     
     
     
