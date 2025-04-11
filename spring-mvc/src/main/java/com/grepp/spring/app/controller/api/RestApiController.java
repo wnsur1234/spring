@@ -82,7 +82,6 @@ public class RestApiController {
     public ResponseEntity<ApiResponse<Void>> error(){
         //throw new RestApiException(ResponseCode.INTERNAL_SERVER_ERROR);
         //throw new RuntimeException();
-        
         errorService.restApiException();
         return null;
     }

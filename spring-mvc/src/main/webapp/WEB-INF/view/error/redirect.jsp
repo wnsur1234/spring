@@ -6,7 +6,7 @@
 </head>
 <body>
     <script>
-        alert('<c:out value="${message}"/>');
+        alert('<c:out value="${requestScope.message}"/>');
         location.href = '/';
     </script>
 

@@ -6,11 +6,15 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
+@Component
 public class FileUtil {
-    
-    private String filePath = "C:/backend/f_spring/upload/";
+
+    @Value("${upload.path}")
+    private String filePath;
     
     public List<FileDto> upload(List<MultipartFile> files, String depth) throws IOException {
         List<FileDto> fileDtos = new ArrayList<>();
