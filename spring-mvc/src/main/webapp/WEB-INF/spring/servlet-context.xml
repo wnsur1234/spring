@@ -5,6 +5,10 @@
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
   <mvc:annotation-driven />
+  <mvc:resources mapping="/assets/**" location="/assets" />
+  <mvc:resources mapping="/download/**" location="file:C:/backend/f_spring/upload" />
+
+
   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     <property name="prefix" value="/WEB-INF/view/"/>
     <property name="suffix" value=".jsp"/>

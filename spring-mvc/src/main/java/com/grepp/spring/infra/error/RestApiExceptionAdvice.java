@@ -1,5 +1,6 @@
 package com.grepp.spring.infra.error;
 
+import com.grepp.spring.infra.error.exceptions.CommonException;
 import com.grepp.spring.infra.error.exceptions.RestApiException;
 import com.grepp.spring.infra.response.ApiResponse;
 import com.grepp.spring.infra.response.ResponseCode;
@@ -7,6 +8,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -43,6 +45,12 @@ public class RestApiExceptionAdvice {
                    .body(ApiResponse.error(ex.code()));
     }
     
+    @ExceptionHandler(CommonException.class)
+    public ResponseEntity<ApiResponse<String>> commonHandler(CommonException ex){
+        return ResponseEntity
+                   .internalServerError()
+                   .body(ApiResponse.error(ResponseCode.INTERNAL_SERVER_ERROR));
+    }
     
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ApiResponse<String>> runtimeExceptionHandler(RuntimeException ex){
