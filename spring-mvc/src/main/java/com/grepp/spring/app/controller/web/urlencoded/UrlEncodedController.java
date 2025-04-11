@@ -150,7 +150,8 @@ public class UrlEncodedController {
     
     @GetMapping("error")
     public String error(){
-        throw new WebException(ResponseCode.BAD_REQUEST);
+        //throw new WebException(ResponseCode.BAD_REQUEST);
+        throw new RuntimeException();
     }
 
 

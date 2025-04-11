@@ -1,6 +1,7 @@
 package com.grepp.spring.infra.error;
 
 import com.grepp.spring.infra.error.exceptions.WebException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
