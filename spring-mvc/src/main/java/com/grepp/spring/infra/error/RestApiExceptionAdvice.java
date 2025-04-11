@@ -11,9 +11,8 @@ import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.server.MethodNotAllowedException;
 
-@RestControllerAdvice
+@RestControllerAdvice(basePackages = "com.grepp.spring.app.controller.api")
 @Slf4j
 public class RestApiExceptionAdvice {
     
@@ -42,5 +41,13 @@ public class RestApiExceptionAdvice {
         return ResponseEntity
                    .status(ex.code().status())
                    .body(ApiResponse.error(ex.code()));
+    }
+    
+    
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<ApiResponse<String>> runtimeExceptionHandler(RuntimeException ex){
+        return ResponseEntity
+                   .internalServerError()
+                   .body(ApiResponse.error(ResponseCode.INTERNAL_SERVER_ERROR));
     }
 }

@@ -2,6 +2,7 @@ package com.grepp.spring.app.controller.web.urlencoded;
 
 import com.grepp.spring.app.controller.web.urlencoded.form.UrlEncodedForm;
 import com.grepp.spring.app.controller.web.urlencoded.validator.UrlEncodedValidator;
+import com.grepp.spring.app.model.error.ErrorService;
 import com.grepp.spring.app.model.urlencoded.dto.UrlEncodedDto;
 import com.grepp.spring.infra.error.exceptions.WebException;
 import com.grepp.spring.infra.response.ResponseCode;
@@ -39,6 +40,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Slf4j
 @RequiredArgsConstructor
 public class UrlEncodedController {
+    
+    private final ErrorService errorService;
     
     // SLF4J : Simple Logging Facade for Java
     // logging : TRACE > DEBUG > INFO > WARN > ERROR > FATAL
@@ -151,8 +154,7 @@ public class UrlEncodedController {
     @GetMapping("error")
     public String error(){
         //throw new WebException(ResponseCode.BAD_REQUEST);
-        throw new RuntimeException();
+        errorService.webException();
+        return "";
     }
-
-
 }

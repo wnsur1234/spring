@@ -3,15 +3,13 @@ package com.grepp.spring.app.controller.api;
 import com.grepp.spring.app.controller.api.form.RestForm;
 import com.grepp.spring.app.controller.api.payload.RestPayload;
 import com.grepp.spring.app.controller.api.validator.RestFormValidator;
-import com.grepp.spring.infra.error.exceptions.RestApiException;
+import com.grepp.spring.app.model.error.ErrorService;
 import com.grepp.spring.infra.response.ApiResponse;
-import com.grepp.spring.infra.response.ResponseCode;
 import jakarta.validation.Valid;
 import java.time.OffsetDateTime;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +23,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("api")
 @Slf4j
+@RequiredArgsConstructor
 public class RestApiController {
+    
+    private final ErrorService errorService;
     
     @InitBinder("restForm")
     public void restFormBinder(WebDataBinder binder){
@@ -78,9 +79,12 @@ public class RestApiController {
     }
     
     @GetMapping("error")
-    public  ResponseEntity<ApiResponse<RestPayload>> error(){
+    public ResponseEntity<ApiResponse<Void>> error(){
         //throw new RestApiException(ResponseCode.INTERNAL_SERVER_ERROR);
-        throw new RuntimeException();
+        //throw new RuntimeException();
+        
+        errorService.restApiException();
+        return null;
     }
     
     
