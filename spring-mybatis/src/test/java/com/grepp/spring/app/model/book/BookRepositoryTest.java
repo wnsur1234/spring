@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import com.grepp.spring.app.model.book.code.Category;
 import com.grepp.spring.app.model.book.dto.Book;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,7 @@ class BookRepositoryTest {
         book.setAuthor("하버마스");
         book.setInfo("어려운 책입니다.");
         bookRepository.insert(book);
+        log.info("{}", book);
     }
     
     @Test
@@ -48,11 +50,29 @@ class BookRepositoryTest {
         book.setBkIdx(1005);
         book.setTitle("정의란 무엇인가");
         book.setAuthor("샌델");
-        bookRepository.update(book);
+        log.info("{}", bookRepository.update(book));
     }
     
+    @Test
+    public void delete(){
+        log.info("{}", bookRepository.delete(1005));
+    }
     
+    @Test
+    public void selectByTitle(){
+        log.info("{}", bookRepository.selectByTitle("리"));
+    }
     
+    @Test
+    public void recentRentBook(){
+        log.info("{}", bookRepository.recentRentBook(3));
+    }
+    
+    @Test
+    @DisplayName("키워드를 사용해 제목 또는 작가 또는 상세 검색")
+    public void selectIf(){
+    
+    }
     
     
     
