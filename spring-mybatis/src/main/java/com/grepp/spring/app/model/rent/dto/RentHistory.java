@@ -6,11 +6,10 @@ import lombok.Data;
 
 @Data
 public class RentHistory {
-    
     private Integer rhIdx;
     private Integer rentId;
     private Integer rbIdx;
     private Integer bkIdx;
-    private LocalDateTime regDate;
+    private LocalDateTime createdAt;
     private RentState state;
 }
