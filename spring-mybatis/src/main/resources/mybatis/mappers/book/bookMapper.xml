@@ -18,7 +18,66 @@
   </select>
 
   <select id="selectByIf">
+    select * from book
+    where activated = true
+    <if test="search == 'title'">
+      and title like concat('%', #{keyword}, '%')
+    </if>
+    <if test="search == 'author'">
+      and author like concat('%', #{keyword}, '%')
+    </if>
+    <if test="search == 'info'">
+      and info like concat('%', #{keyword}, '%')
+    </if>
+    order by created_at desc
+    limit 5
+  </select>
 
+  <select id="selectByChooseWhen">
+    select * from book
+    where activated = true
+    <choose>
+      <when test="search == 'title'">
+        and title like concat('%', #{keyword}, '%')
+      </when>
+      <when test="search == 'author'">
+        and author like concat('%', #{keyword}, '%')
+      </when>
+      <otherwise>
+        and info like concat('%', #{keyword}, '%')
+      </otherwise>
+    </choose>
+    order by created_at desc
+    limit 5
+  </select>
+
+  <!--
+    NOTE 02 : dynamic query
+    매개변수가 List 인 경우, {list=books}
+  -->
+  <insert id="bulkInsert">
+    insert into book(category, title, author, info)
+    values
+    <foreach collection="list" item="book" separator=",">
+      (#{book.category}, #{book.title}, #{book.author}, #{book.info})
+    </foreach>
+  </insert>
+  
+  <select id="selectDynamic">
+    select * from book
+    <where>
+      <foreach collection="searches" item="search">
+        <if test="search == 'rentable'">
+          amount > 0
+        </if>
+        <if test="search == 'title'">
+          or title like concat('%', #{keyword}, '%')
+        </if>
+        <if test="search == 'author'">
+          or author like concat('%', #{keyword}, '%')
+        </if>
+      </foreach>
+    </where>
   </select>
 
 </mapper>

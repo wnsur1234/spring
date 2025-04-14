@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import com.grepp.spring.app.model.book.code.Category;
 import com.grepp.spring.app.model.book.dto.Book;
+import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -71,12 +72,24 @@ class BookRepositoryTest {
     @Test
     @DisplayName("키워드를 사용해 제목 또는 작가 또는 상세 검색")
     public void selectIf(){
-    
+        log.info("{}", bookRepository.selectByIf("author", "란"));
     }
     
+    @Test
+    public void selectByChooseWhen(){
+        log.info("{}", bookRepository.selectByChooseWhen("title", "정당"));
+    }
     
+    @Test
+    public void bulkInsert(){
+        Book test = new Book(Category.HUMANITY, "테스트1", "테스터", "테스트 도서 입니다.");
+        Book test2 = new Book(Category.NOVEL, "테스트2", "테스터", "테스트 도서 입니다.");
+        bookRepository.bulkInsert(List.of(test, test2));
+    }
     
-    
-    
+    @Test
+    public void selectDynamic(){
+        log.info("{}", bookRepository.selectDynamic(List.of("author", "title"), "디디"));
+    }
     
 }
