@@ -9,7 +9,7 @@
 <%@include file="/WEB-INF/view/include/header.jsp" %>
 <%@include file="/WEB-INF/view/include/sidenav.jsp" %>
 <main class="container">
-    <form:form modelAttribute="urlEncodedForm" class="col s12" action="/form" method="post">
+    <form:form modelAttribute="signupForm" class="col s12" action="/member/signup" method="post">
         <div class="row">
             <div class="input-field col s7 ">
                 <i class="material-icons prefix">account_circle</i>

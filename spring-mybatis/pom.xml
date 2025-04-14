@@ -87,11 +87,13 @@
       <groupId>com.zaxxer</groupId>
       <version>${hikaricp.version}</version>
     </dependency>
+
     <dependency>
       <artifactId>spring-orm</artifactId>
       <groupId>org.springframework</groupId>
       <version>${spring-framework.version}</version>
     </dependency>
+
     <dependency>
       <artifactId>mybatis</artifactId>
       <groupId>org.mybatis</groupId>

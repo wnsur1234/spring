@@ -29,6 +29,10 @@
     </property>
   </bean>
 
+  <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+    <constructor-arg index="0" ref="sqlSessionFactory" />
+  </bean>
+
   <mybatis:scan base-package="com.grepp.spring.app.model" annotation="org.apache.ibatis.annotations.Mapper"/>
   <context:component-scan base-package="com.grepp.spring"/>
 
