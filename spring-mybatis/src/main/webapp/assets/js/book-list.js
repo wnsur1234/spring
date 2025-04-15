@@ -1,5 +1,6 @@
 let page = 1;
 const size = 3;
+const observeTarget = document.querySelector(".page-footer");
 
 const createBook = data => {
   const clone = document.querySelector('#bookListTemplate').firstElementChild.cloneNode(true);
@@ -18,11 +19,10 @@ const intersectionObserver = new IntersectionObserver(
 
   const response = await fetch(`http://localhost:8080/api/book/list?page=${++page}&size=${size}`);
   const data = await response.json();
-  console.dir(data);
   const books = data.data.bookInfos;
 
-  if(!books){
-    intersectionObserver.unobserve(document.querySelector(".page-footer"));
+  if(!books || books.length === 0){
+    intersectionObserver.unobserve(observeTarget);
     return;
   }
 
@@ -32,4 +32,4 @@ const intersectionObserver = new IntersectionObserver(
   })
 });
 
-intersectionObserver.observe(document.querySelector(".page-footer"));
+intersectionObserver.observe(observeTarget);
