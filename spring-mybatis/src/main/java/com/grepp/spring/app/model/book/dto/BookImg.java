@@ -4,8 +4,10 @@ import com.grepp.spring.app.model.book.code.BookImgType;
 import com.grepp.spring.infra.util.file.FileDto;
 import java.time.LocalDateTime;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class BookImg {
     
     private Integer biIdx;
