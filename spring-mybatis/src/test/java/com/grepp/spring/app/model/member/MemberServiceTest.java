@@ -3,6 +3,8 @@ package com.grepp.spring.app.model.member;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 import com.grepp.spring.app.model.member.dto.Member;
 import com.grepp.spring.infra.error.exceptions.CommonException;

@@ -1,6 +1,6 @@
 let page = 1;
 const size = 3;
-const observeTarget = document.querySelector(".page-footer");
+const observeTarget = document.querySelector(".target");
 
 const createBook = data => {
   const clone = document.querySelector('#bookListTemplate').firstElementChild.cloneNode(true);
@@ -13,6 +13,14 @@ const createBook = data => {
   author.textContent = data.author;
   return clone;
 }
+
+document.addEventListener('scroll', ev => {
+  observeTarget.style.display='block';
+});
+
+document.addEventListener('scrollend', ev => {
+  observeTarget.style.display='none';
+});
 
 const intersectionObserver = new IntersectionObserver(
     async function (entries) {
