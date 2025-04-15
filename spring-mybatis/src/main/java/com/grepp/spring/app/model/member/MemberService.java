@@ -49,4 +49,8 @@ public class MemberService{
         
         return new Principal(userId, List.of(Role.ROLE_USER), LocalDateTime.now());
     }
+    
+    public Boolean isDuplicatedId(String id) {
+        return memberRepository.existsMember(id);
+    }
 }

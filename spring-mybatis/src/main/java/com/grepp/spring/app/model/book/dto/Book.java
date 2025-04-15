@@ -14,6 +14,7 @@ public class Book {
     private String title;
     private String author;
     private String info;
+    private BookImg thumbnail;
     private Integer amount;
     private LocalDateTime createdAt;
     private Integer rentCnt;
