@@ -53,6 +53,10 @@
                 <label>Materialize Select</label>
             </div>
         </div>
+        <button class="btn waves-effect waves-light offset-s1" type="submit" name="action">
+            Submit
+            <i class="material-icons right">send</i>
+        </button>
     </form:form>
 </main>
 <%@include file="/WEB-INF/view/include/footer.jsp" %>

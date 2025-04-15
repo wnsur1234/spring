@@ -18,14 +18,14 @@ public class BookRegistForm {
     @NotBlank
     private String info;
     @NotBlank
-    private Category category;
+    private String category;
     
     public Book toDto(){
         Book book = new Book();
         book.setTitle(title);
         book.setAuthor(author);
         book.setInfo(info);
-        book.setCategory(category);
+        book.setCategory(Category.valueOf(category));
         return book;
     }
 }
