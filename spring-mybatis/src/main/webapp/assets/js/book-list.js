@@ -40,6 +40,7 @@ const intersectionObserver = new IntersectionObserver(
         const clone = createBook(e);
         document.querySelector('.book-list').appendChild(clone);
       })
+
       observeTarget.style.display = 'none';
     });
 
