@@ -3,6 +3,7 @@ package com.grepp.spring.infra.config;
 import static org.springframework.http.HttpMethod.GET;
 import static org.springframework.http.HttpMethod.POST;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -24,7 +25,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 
 @Configuration
 @EnableWebSecurity
-@EnableMethodSecurity
+@EnableMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
     
     @Value("${remember-me.key}")
@@ -71,9 +72,9 @@ public class SecurityConfig {
                                   .requestMatchers(GET, "/", "/assets/**", "/download/**").permitAll()
                                   .requestMatchers(GET, "/book/list").permitAll()
                                   .requestMatchers(GET, "/api/member/exists/*").permitAll()
-                                  .requestMatchers(GET, "/member/signup", "/admin/signup").permitAll()
-                                  .requestMatchers(POST, "/member/signin", "/member/signup", "/admin/signup").permitAll()
-                                  .requestMatchers("/admin/**, /api/admin/**").hasAuthority("ROLE_ADMIN")
+                                  .requestMatchers(GET, "/member/signup").anonymous()
+                                  .requestMatchers(POST, "/member/signin", "/member/signup").anonymous()
+                                  .requestMatchers("/admin/**", "/api/admin/**").hasAuthority("ROLE_ADMIN")
                                   .anyRequest().authenticated()
             )
             .formLogin((form) -> form
@@ -85,6 +86,13 @@ public class SecurityConfig {
                                      .permitAll()
             )
             .rememberMe(rememberMe -> rememberMe.key(rememberMeKey))
+            .exceptionHandling(ex -> {
+                ex.accessDeniedHandler((request, response, accessDeniedException) -> {
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("/WEB-INF/view/error/redirect.jsp");
+                    request.setAttribute("message", "접근 권한이 없습니다.");
+                    requestDispatcher.forward(request, response);
+                });
+            })
             .logout(LogoutConfigurer::permitAll);
         
         return http.build();
