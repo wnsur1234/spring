@@ -5,20 +5,17 @@ import static org.springframework.http.HttpMethod.POST;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.LogoutConfigurer;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
+@EnableMethodSecurity
 public class SecurityConfig {
     
     @Bean
@@ -29,8 +26,12 @@ public class SecurityConfig {
         http
             .authorizeHttpRequests(
                 (requests) -> requests
-                                  .requestMatchers(GET, "/member/signup").permitAll()
+                                  .requestMatchers(GET, "/", "/assets/**", "/download/**").permitAll()
+                                  .requestMatchers(GET, "/book/list").permitAll()
+                                  .requestMatchers(GET, "/api/member/exists/*").permitAll()
+                                  .requestMatchers(GET, "/member/signup", "/admin/signup").permitAll()
                                   .requestMatchers(POST, "/member/signin", "/member/signup").permitAll()
+                                  .requestMatchers("/admin/**, /api/admin/**").hasAuthority("ROLE_ADMIN")
                                   .anyRequest().authenticated()
             )
             .formLogin((form) -> form
