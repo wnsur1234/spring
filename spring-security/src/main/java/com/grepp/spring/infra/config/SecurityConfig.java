@@ -72,7 +72,7 @@ public class SecurityConfig {
                                   .requestMatchers(GET, "/", "/assets/**", "/download/**").permitAll()
                                   .requestMatchers(GET, "/book/list").permitAll()
                                   .requestMatchers(GET, "/api/member/exists/*").permitAll()
-                                  .requestMatchers(GET, "/member/signup").anonymous()
+                                  .requestMatchers(GET, "/member/signin", "/member/signup").anonymous()
                                   .requestMatchers(POST, "/member/signin", "/member/signup").anonymous()
                                   .requestMatchers("/admin/**", "/api/admin/**").hasAuthority("ROLE_ADMIN")
                                   .anyRequest().authenticated()
@@ -85,13 +85,13 @@ public class SecurityConfig {
                                      .successHandler(successHandler())
             )
             .rememberMe(rememberMe -> rememberMe.key(rememberMeKey))
-//            .exceptionHandling(ex -> {
-//                ex.accessDeniedHandler((request, response, accessDeniedException) -> {
-//                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("/WEB-INF/view/error/redirect.jsp");
-//                    request.setAttribute("message", "접근 권한이 없습니다.");
-//                    requestDispatcher.forward(request, response);
-//                });
-//            })
+            .exceptionHandling(ex -> {
+                ex.accessDeniedHandler((request, response, accessDeniedException) -> {
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("/WEB-INF/view/error/redirect.jsp");
+                    request.setAttribute("message", "접근 권한이 없습니다.");
+                    requestDispatcher.forward(request, response);
+                });
+            })
             .logout(LogoutConfigurer::permitAll);
         
         return http.build();
