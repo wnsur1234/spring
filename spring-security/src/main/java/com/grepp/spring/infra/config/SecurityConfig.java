@@ -21,6 +21,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.access.AccessDeniedHandlerImpl;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 @Configuration
@@ -72,7 +74,7 @@ public class SecurityConfig {
                                   .requestMatchers(GET, "/", "/assets/**", "/download/**").permitAll()
                                   .requestMatchers(GET, "/book/list").permitAll()
                                   .requestMatchers(GET, "/api/member/exists/*").permitAll()
-                                  .requestMatchers(GET, "/member/signin", "/member/signup").anonymous()
+                                  .requestMatchers(GET, "/member/signup").anonymous()
                                   .requestMatchers(POST, "/member/signin", "/member/signup").anonymous()
                                   .requestMatchers("/admin/**", "/api/admin/**").hasAuthority("ROLE_ADMIN")
                                   .anyRequest().authenticated()
@@ -83,6 +85,7 @@ public class SecurityConfig {
                                      .loginProcessingUrl("/member/signin")
                                      .defaultSuccessUrl("/")
                                      .successHandler(successHandler())
+                                     .permitAll()
             )
             .rememberMe(rememberMe -> rememberMe.key(rememberMeKey))
             .exceptionHandling(ex -> {
@@ -96,6 +99,7 @@ public class SecurityConfig {
         
         return http.build();
     }
+    
     
     @Bean
     public PasswordEncoder passwordEncoder(){
