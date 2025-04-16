@@ -73,7 +73,6 @@ public class MemberController {
         return "member/mypage";
     }
     
-    
     // NOTE cors
     // cross origin resource sharing
     // origin : protocol + host + port 
