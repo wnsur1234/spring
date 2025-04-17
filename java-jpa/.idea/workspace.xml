@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54d3968f-f7b1-4049-a18b-0939ea22e804" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/book/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpa/JpaTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/member/MemberRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/member/MemberService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/book/BookServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/member/MemberServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Run.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/book/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/member/MemberServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/member/MemberServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/error/exceptions/CommonException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/error/exceptions/CommonException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot-thymeleaf/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-thymeleaf/src/main/resources/templates/index.html" afterDir="false" />
@@ -63,7 +55,13 @@
     "Application.Run.executor": "Run",
     "JUnit.BookServiceTest.add.executor": "Run",
     "JUnit.MemberServiceTest.add.executor": "Run",
+    "JUnit.MemberServiceTest.detach.executor": "Run",
+    "JUnit.MemberServiceTest.findAll.executor": "Run",
     "JUnit.MemberServiceTest.findById.executor": "Run",
+    "JUnit.MemberServiceTest.findWithCreatedAt.executor": "Run",
+    "JUnit.MemberServiceTest.merge.executor": "Run",
+    "JUnit.MemberServiceTest.modify.executor": "Debug",
+    "JUnit.MemberServiceTest.remove.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -96,31 +94,8 @@
       <recent name="member" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BookServiceTest.add">
-    <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Run" />
-      <module name="jpa" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookServiceTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jpa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="book.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="book" />
-      <option name="MAIN_CLASS_NAME" value="book.BookServiceTest" />
-      <option name="METHOD_NAME" value="add" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemberServiceTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MemberServiceTest.findWithCreatedAt">
+    <configuration name="MemberServiceTest.detach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jpa" />
       <extension name="coverage">
         <pattern>
@@ -130,13 +105,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="member" />
       <option name="MAIN_CLASS_NAME" value="member.MemberServiceTest" />
-      <option name="METHOD_NAME" value="add" />
+      <option name="METHOD_NAME" value="detach" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberServiceTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MemberServiceTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jpa" />
       <extension name="coverage">
         <pattern>
@@ -146,7 +121,55 @@
       </extension>
       <option name="PACKAGE_NAME" value="member" />
       <option name="MAIN_CLASS_NAME" value="member.MemberServiceTest" />
-      <option name="METHOD_NAME" value="findById" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberServiceTest.findWithCreatedAt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="member.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="member" />
+      <option name="MAIN_CLASS_NAME" value="member.MemberServiceTest" />
+      <option name="METHOD_NAME" value="findWithCreatedAt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberServiceTest.merge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="member.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="member" />
+      <option name="MAIN_CLASS_NAME" value="member.MemberServiceTest" />
+      <option name="METHOD_NAME" value="merge" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberServiceTest.remove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="member.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="member" />
+      <option name="MAIN_CLASS_NAME" value="member.MemberServiceTest" />
+      <option name="METHOD_NAME" value="remove" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,10 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BookServiceTest.add" />
-        <item itemvalue="JUnit.MemberServiceTest.add" />
-        <item itemvalue="JUnit.MemberServiceTest.findById" />
-        <item itemvalue="Application.Run" />
+        <item itemvalue="JUnit.MemberServiceTest.findWithCreatedAt" />
+        <item itemvalue="JUnit.MemberServiceTest.findAll" />
+        <item itemvalue="JUnit.MemberServiceTest.remove" />
+        <item itemvalue="JUnit.MemberServiceTest.detach" />
+        <item itemvalue="JUnit.MemberServiceTest.merge" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +201,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1744860263331</updated>
-      <workItem from="1744860264333" duration="6238000" />
+      <workItem from="1744860264333" duration="9688000" />
     </task>
     <servers />
   </component>
