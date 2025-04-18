@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54d3968f-f7b1-4049-a18b-0939ea22e804" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/rent/RentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rent/RentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/rent/RentServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17b3c378-0387-4dfd-b3d5-d1eacfac20aa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/17b3c378-0387-4dfd-b3d5-d1eacfac20aa.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/MemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/member/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/member/MemberServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/member/MemberServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/error/exceptions/CommonException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/error/exceptions/CommonException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rent/Rent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rent/Rent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rent/RentBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rent/RentBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/java/com/grepp/spring/app/controller/web/book/form/BookRegistForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/grepp/spring/app/controller/web/book/form/BookRegistForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/error/RestApiExceptionAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/error/WebExceptionAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/error/exceptions/CommonException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/response/ApiResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/response/ResponseCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/util/file/FileDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-study/src/main/java/com/grepp/spring/infra/util/file/FileUtil.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot-thymeleaf/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-thymeleaf/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot-thymeleaf/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-thymeleaf/src/main/resources/templates/layout.html" afterDir="false" />
     </list>
@@ -31,10 +40,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -42,9 +51,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2vq6TLwHwUWFpuAC1kRXk42McBY" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -62,6 +71,8 @@
     "JUnit.MemberServiceTest.merge.executor": "Run",
     "JUnit.MemberServiceTest.modify.executor": "Debug",
     "JUnit.MemberServiceTest.remove.executor": "Run",
+    "JUnit.RentServiceTest.add.executor": "Run",
+    "JUnit.RentServiceTest.addRentBook.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -90,27 +101,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="rent" />
       <recent name="book" />
       <recent name="member" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MemberServiceTest.findWithCreatedAt">
-    <configuration name="MemberServiceTest.detach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jpa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="member.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="member" />
-      <option name="MAIN_CLASS_NAME" value="member.MemberServiceTest" />
-      <option name="METHOD_NAME" value="detach" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.RentServiceTest.addRentBook">
     <configuration name="MemberServiceTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jpa" />
       <extension name="coverage">
@@ -143,22 +139,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberServiceTest.merge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jpa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="member.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="member" />
-      <option name="MAIN_CLASS_NAME" value="member.MemberServiceTest" />
-      <option name="METHOD_NAME" value="merge" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MemberServiceTest.remove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jpa" />
       <extension name="coverage">
@@ -175,13 +155,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RentServiceTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rent" />
+      <option name="MAIN_CLASS_NAME" value="rent.RentServiceTest" />
+      <option name="METHOD_NAME" value="add" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RentServiceTest.addRentBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rent" />
+      <option name="MAIN_CLASS_NAME" value="rent.RentServiceTest" />
+      <option name="METHOD_NAME" value="addRentBook" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RentServiceTest.addRentBook" />
+        <item itemvalue="JUnit.RentServiceTest.add" />
         <item itemvalue="JUnit.MemberServiceTest.findWithCreatedAt" />
         <item itemvalue="JUnit.MemberServiceTest.findAll" />
         <item itemvalue="JUnit.MemberServiceTest.remove" />
-        <item itemvalue="JUnit.MemberServiceTest.detach" />
-        <item itemvalue="JUnit.MemberServiceTest.merge" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +213,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1744860263331</updated>
-      <workItem from="1744860264333" duration="9688000" />
+      <workItem from="1744860264333" duration="12150000" />
+      <workItem from="1744934405690" duration="3438000" />
     </task>
     <servers />
   </component>
