@@ -7,10 +7,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.NamedAttributeNode;
+import jakarta.persistence.NamedEntityGraph;
+import jakarta.persistence.NamedSubgraph;
 import jakarta.persistence.OneToMany;
 import java.time.LocalDateTime;
 import java.util.List;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -18,8 +20,24 @@ import member.Member;
 
 @Entity
 @ToString
-@Getter @Setter
+@Getter
+@Setter
+@NamedEntityGraph(
+    name = "rentEntityGraph",
+    attributeNodes = {
+        @NamedAttributeNode("rentBooks"), @NamedAttributeNode("member")
+    },
+    subgraphs = {
+        @NamedSubgraph(
+            name = "rentBooks",
+            attributeNodes = {
+                @NamedAttributeNode("book")
+            }
+        )
+    }
+)
 public class Rent {
+    
     @Id
     @GeneratedValue
     private Long rentId;
@@ -44,4 +62,8 @@ public class Rent {
         rentBooks.add(rentBook);
     }
     
+    public void removeRentBook(long rbIdx) {
+        rentBooks.removeIf( e -> e.getRbIdx() == rbIdx );
+        System.out.println(rentBooks);
+    }
 }
