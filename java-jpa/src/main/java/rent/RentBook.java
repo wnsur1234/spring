@@ -1,6 +1,7 @@
 package rent;
 
 import book.Book;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -42,10 +43,5 @@ public class RentBook {
                    ", activated=" + activated +
                    ", book=" + book +
                    '}';
-    }
-    
-    public void unlink() {
-        this.rent.removeRentBook(this.rbIdx);
-        this.rent = null;
     }
 }

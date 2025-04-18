@@ -1,5 +1,7 @@
 package rent;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.List;
 import org.junit.jupiter.api.Test;
 
@@ -23,14 +25,4 @@ class RentServiceTest {
         rentService.removeRent(52L);
     }
     
-    @Test
-    public void removeRentBook(){
-        rentService.removeRentBook(200009);
-    }
-    
-    @Test
-    public void removeRentBookWithRent(){
-        rentService.removeRentBookWithRent(100001, 200008);
-    }
- 
 }
