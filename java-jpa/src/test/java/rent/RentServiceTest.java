@@ -17,7 +17,12 @@ class RentServiceTest {
     
     @Test
     public void addRentBook(){
-        rentService.addRentBook("test", 52L, 10001L);
+        rentService.addRentBook("test", 52L, 1001L);
+    }
+    
+    @Test
+    public void removeRent(){
+        rentService.removeRent(52L);
     }
     
 }

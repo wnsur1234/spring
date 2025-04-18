@@ -34,15 +34,15 @@ public class RentService {
                 RentBook rb = new RentBook();
                 rb.setBook(book);
                 rb.setBookTitle(book.getTitle());
-                rb.setRent(rent);
-                em.persist(rb);
                 return rb;
             }).toList();
             
             rent.setMember(member);
+            rent.setRentBooks(rentBooks);
             em.persist(rent);
             tx.commit();
         }catch (Exception e){
+            e.printStackTrace();
             tx.rollback();
         }finally {
             em.close();
@@ -60,16 +60,31 @@ public class RentService {
             RentBook rentBook = new RentBook();
             rentBook.setBookTitle(book.getTitle());
             rentBook.setBook(book);
-            rentBook.setRent(rent);
             
+            rentBook.setRent(rent);
             em.persist(rentBook);
             tx.commit();
         }catch (Exception e){
+            e.printStackTrace();
             tx.rollback();
         }finally {
             em.close();
         }
     }
     
-    
+    public void removeRent(long rentId){
+        EntityManager em = template.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+        try{
+            tx.begin();
+            Rent rent = em.find(Rent.class, rentId);
+            em.remove(rent);
+            tx.commit();
+        }catch (Exception e){
+            e.printStackTrace();
+            tx.rollback();
+        }finally {
+            em.close();
+        }
+    }
 }
