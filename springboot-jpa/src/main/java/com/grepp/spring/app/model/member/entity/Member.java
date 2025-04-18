@@ -9,6 +9,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
+import java.time.LocalDateTime;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,4 +30,8 @@ public class Member extends BaseEntity {
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "userId")
     private MemberInfo info;
+    
+    public void updateLoginedAt(LocalDateTime time){
+        info.setLoginDate(time);
+    }
 }
