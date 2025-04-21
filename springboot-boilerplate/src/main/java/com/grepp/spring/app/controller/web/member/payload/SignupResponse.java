@@ -1,6 +1,6 @@
 package com.grepp.spring.app.controller.web.member.payload;
 
-import com.grepp.spring.app.model.member.dto.Member;
+import com.grepp.spring.app.model.member.dto.MemberDto;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -21,12 +21,12 @@ public class SignupResponse {
     @Size(min = 8, max = 14)
     private String tel;
     
-    public Member toDto(){
-        Member member = new Member();
-        member.setUserId(userId);
-        member.setPassword(password);
-        member.setEmail(email);
-        member.setTel(tel);
-        return member;
+    public MemberDto toDto(){
+        MemberDto memberDto = new MemberDto();
+        memberDto.setUserId(userId);
+        memberDto.setPassword(password);
+        memberDto.setEmail(email);
+        memberDto.setTel(tel);
+        return memberDto;
     }
 }

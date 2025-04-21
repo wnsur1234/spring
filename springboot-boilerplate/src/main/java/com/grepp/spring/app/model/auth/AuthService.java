@@ -2,9 +2,9 @@ package com.grepp.spring.app.model.auth;
 
 import com.grepp.spring.app.model.auth.domain.Principal;
 import com.grepp.spring.app.model.member.MemberRepository;
-import com.grepp.spring.app.model.member.dto.Member;
-import com.grepp.spring.app.model.team.TeamRepository;
-import com.grepp.spring.app.model.team.dto.TeamMember;
+import com.grepp.spring.app.model.member.entity.Member;
+import com.grepp.spring.app.model.team.TeamMemberRepository;
+import com.grepp.spring.app.model.team.entity.TeamMember;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -21,19 +21,18 @@ import org.springframework.stereotype.Service;
 public class AuthService implements UserDetailsService {
     
     private final MemberRepository memberRepository;
-    private final TeamRepository teamRepository;
-    
+    private final TeamMemberRepository teamMemberRepository;
     
     @Override
     public UserDetails loadUserByUsername(String username){
         
-        Member member = memberRepository.selectById(username)
+        Member member = memberRepository.findById(username)
                             .orElseThrow(() -> new UsernameNotFoundException(username));
         
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
         authorities.add(new SimpleGrantedAuthority(member.getRole().name()));
         
-        List<TeamMember> teamMembers = teamRepository.selectMembersByUserId(username);
+        List<TeamMember> teamMembers = teamMemberRepository.findByUserIdAndActivated(username, true);
         
         // 스프링시큐리티는 기본적으로 권한 앞에 ROLE_ 이 있음을 가정
         // hasRole("ADMIN") =>  ROLE_ADMIN 권한이 있는 지 확인.

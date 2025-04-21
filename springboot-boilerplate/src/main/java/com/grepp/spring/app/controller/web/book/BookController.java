@@ -3,7 +3,7 @@ package com.grepp.spring.app.controller.web.book;
 import com.grepp.spring.app.controller.web.book.payload.BookRegistRequest;
 import com.grepp.spring.app.model.book.BookService;
 import com.grepp.spring.app.model.book.code.Category;
-import com.grepp.spring.app.model.book.dto.Book;
+import com.grepp.spring.app.model.book.dto.BookDto;
 import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -44,8 +44,8 @@ public class BookController {
     
     @GetMapping("list")
     public String list(Model model){
-        List<Book> books = bookService.findPaged(1, 5);
-        model.addAttribute("books", books);
+        List<BookDto> bookDtos = bookService.findPaged(1, 5);
+        model.addAttribute("books", bookDtos);
         return "book/book-list";
     }
 }

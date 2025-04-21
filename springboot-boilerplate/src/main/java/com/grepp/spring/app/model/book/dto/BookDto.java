@@ -8,23 +8,24 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class Book {
+public class BookDto {
     
-    private Integer bkIdx;
+    private Long id;
     private Category category;
     private String title;
     private String author;
     private String info;
-    private List<BookImg> images;
+    private List<BookImgDto> images;
     private Integer amount;
     private LocalDateTime createdAt;
     private Integer rentCnt;
     private Boolean activated;
     
-    public Book(Category category, String title, String author, String info) {
+    public BookDto(Category category, String title, String author, String info) {
         this.category = category;
         this.title = title;
         this.author = author;
         this.info = info;
     }
+    
 }

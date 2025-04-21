@@ -1,7 +1,7 @@
 package com.grepp.spring.app.controller.web.book.payload;
 
 import com.grepp.spring.app.model.book.code.Category;
-import com.grepp.spring.app.model.book.dto.Book;
+import com.grepp.spring.app.model.book.dto.BookDto;
 import jakarta.validation.constraints.NotBlank;
 import java.util.List;
 import lombok.Data;
@@ -20,12 +20,12 @@ public class BookRegistRequest {
     @NotBlank
     private String category;
     
-    public Book toDto(){
-        Book book = new Book();
-        book.setTitle(title);
-        book.setAuthor(author);
-        book.setInfo(info);
-        book.setCategory(Category.valueOf(category));
-        return book;
+    public BookDto toDto(){
+        BookDto bookDto = new BookDto();
+        bookDto.setTitle(title);
+        bookDto.setAuthor(author);
+        bookDto.setInfo(info);
+        bookDto.setCategory(Category.valueOf(category));
+        return bookDto;
     }
 }

@@ -1,14 +1,8 @@
 package com.grepp.spring.app.model.team;
 
-import com.grepp.spring.app.model.team.dto.TeamMember;
-import java.util.List;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import com.grepp.spring.app.model.team.entity.Team;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Mapper
-public interface TeamRepository {
-    
-    @Select("select * from team_member where USER_ID = #{id} and ACTIVATED")
-    List<TeamMember> selectMembersByUserId(String id);
+public interface TeamRepository extends JpaRepository<Team, Long> {
 
 }

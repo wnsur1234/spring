@@ -1,10 +1,8 @@
 package com.grepp.spring.app.model.rent;
 
-import com.grepp.spring.app.model.rent.dto.Rent;
-import java.util.List;
-import org.apache.ibatis.annotations.Mapper;
+import com.grepp.spring.app.model.rent.entity.Rent;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Mapper
-public interface RentRepository {
-    List<Rent> selectAll();
+public interface RentRepository extends JpaRepository<Rent, Long> {
+
 }

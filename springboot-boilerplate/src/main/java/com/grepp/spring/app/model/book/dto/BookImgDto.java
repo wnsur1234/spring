@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class BookImg {
-    private Integer biIdx;
-    private Integer bkIdx;
+public class BookImgDto {
+    private Long id;
     private BookImgType type;
     private String originFileName;
     private String renameFileName;
@@ -17,8 +16,7 @@ public class BookImg {
     private LocalDateTime createdAt;
     private Boolean activated;
     
-    public BookImg(Integer bkIdx, BookImgType type, FileDto fileDto){
-        this.bkIdx = bkIdx;
+    public BookImgDto(BookImgType type, FileDto fileDto){
         this.type = type;
         this.originFileName = fileDto.originFileName();
         this.renameFileName = fileDto.renameFileName();

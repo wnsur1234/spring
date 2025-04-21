@@ -3,7 +3,7 @@ package com.grepp.spring.app.controller.api.book;
 import com.grepp.spring.app.controller.api.book.payload.BookListRequest;
 import com.grepp.spring.app.controller.api.book.payload.BookListResponse;
 import com.grepp.spring.app.model.book.BookService;
-import com.grepp.spring.app.model.book.dto.Book;
+import com.grepp.spring.app.model.book.dto.BookDto;
 import com.grepp.spring.infra.response.ApiResponse;
 import jakarta.validation.Valid;
 import java.util.List;
@@ -26,8 +26,8 @@ public class BookApiController {
     public ResponseEntity<ApiResponse<BookListResponse>> bookList(
         @Valid BookListRequest form
     ){
-        List<Book> books = bookService.findPaged(form.getPage(), form.getSize());
-        BookListResponse payload = BookListResponse.fromDtoList(books);
+        List<BookDto> bookDtos = bookService.findPaged(form.getPage(), form.getSize());
+        BookListResponse payload = BookListResponse.fromDtoList(bookDtos);
         return ResponseEntity.ok(ApiResponse.success(payload));
     }
 }
