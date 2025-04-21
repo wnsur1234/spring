@@ -6,6 +6,7 @@ import com.grepp.spring.app.model.book.code.Category;
 import com.grepp.spring.app.model.book.dto.BookDto;
 import com.grepp.spring.infra.error.exceptions.CommonException;
 import com.grepp.spring.infra.payload.PageParam;
+import com.grepp.spring.infra.response.PageResponse;
 import com.grepp.spring.infra.response.ResponseCode;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -61,8 +62,14 @@ public class BookController {
         }
         
         Pageable pageable = PageRequest.of(param.getPage() - 1, param.getSize());
-        Page<BookDto> bookDtos = bookService.findPaged(pageable);
-        model.addAttribute("books", bookDtos);
+        Page<BookDto> page = bookService.findPaged(pageable);
+        
+        if(param.getPage() != 1 && page.getContent().isEmpty()){
+            throw new CommonException(ResponseCode.BAD_REQUEST);
+        }
+        
+        PageResponse<BookDto> response = new PageResponse<>(page, 3);
+        model.addAttribute("page", response);
         return "book/book-list";
     }
 }
