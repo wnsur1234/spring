@@ -65,28 +65,35 @@ public class SecurityConfig {
     
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        
+        // * : 1depth 아래 모든 경로
+        // ** : 모든 depth 의 모든 경로
+        // Security Config 에는 인증과 관련된 설정만 지정 (PermitAll or Authenticated)
         http
             .authorizeHttpRequests(
                 (requests) -> requests
-                                  .anyRequest().permitAll()
+                                  .requestMatchers(GET, "/", "/assets/**", "/download/**").permitAll()
+                                  .requestMatchers(GET, "/book/list").permitAll()
+                                  .requestMatchers(GET, "/api/book/list").permitAll()
+                                  .requestMatchers(GET, "/api/member/exists/*").permitAll()
+                                  .requestMatchers(GET, "/member/signup").permitAll()
+                                  .requestMatchers(GET, "/member/signin").permitAll()
+                                  .requestMatchers(POST, "/member/signin", "/member/signup").permitAll()
+                                  .anyRequest().authenticated()
             )
+            .formLogin((form) -> form
+                                     .loginPage("/member/signin")
+                                     .usernameParameter("userId")
+                                     .loginProcessingUrl("/member/signin")
+                                     .defaultSuccessUrl("/")
+                                     .successHandler(successHandler())
+                                     .permitAll()
+            )
+            .rememberMe(rememberMe -> rememberMe.key(rememberMeKey))
             .logout(LogoutConfigurer::permitAll);
+        
         return http.build();
     }
-    
-    @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails user =
-            User.withDefaultPasswordEncoder()
-                .username("user")
-                .password("password")
-                .roles("USER")
-                .build();
-        
-        return new InMemoryUserDetailsManager(user);
-    }
-    
-    
     
     @Bean
     public PasswordEncoder passwordEncoder(){

@@ -1,7 +1,7 @@
 package com.grepp.spring.app.controller.web.member;
 
 import com.grepp.spring.app.controller.web.member.payload.SigninRequest;
-import com.grepp.spring.app.controller.web.member.payload.SignupResponse;
+import com.grepp.spring.app.controller.web.member.payload.SignupRequest;
 import com.grepp.spring.app.model.auth.code.Role;
 import com.grepp.spring.app.model.member.MemberService;
 import com.grepp.spring.app.model.member.dto.MemberDto;
@@ -27,13 +27,13 @@ public class MemberController {
     private final MemberService memberService;
 
     @GetMapping("signup")
-    public String signup(SignupResponse form){
+    public String signup(SignupRequest form){
         return "member/signup";
     }
     
     @PostMapping("signup")
     public String signup(
-        @Valid SignupResponse form,
+        @Valid SignupRequest form,
         BindingResult bindingResult,
         Model model){
         

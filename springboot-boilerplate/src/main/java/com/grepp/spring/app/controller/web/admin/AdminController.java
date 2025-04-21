@@ -1,6 +1,6 @@
 package com.grepp.spring.app.controller.web.admin;
 
-import com.grepp.spring.app.controller.web.member.payload.SignupResponse;
+import com.grepp.spring.app.controller.web.member.payload.SignupRequest;
 import com.grepp.spring.app.model.auth.code.Role;
 import com.grepp.spring.app.model.member.MemberService;
 import jakarta.validation.Valid;
@@ -28,12 +28,12 @@ public class AdminController {
     }
     
     @GetMapping("signup")
-    public String signup(SignupResponse form){
+    public String signup(SignupRequest form){
         return "admin/signup";
     }
     
     @PostMapping("signup")
-    public String signup(@Valid SignupResponse form, BindingResult bindingResult){
+    public String signup(@Valid SignupRequest form, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             return "admin/signup";
         }
