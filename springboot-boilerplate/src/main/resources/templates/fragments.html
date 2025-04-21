@@ -29,7 +29,7 @@
     <nav class="navbar white">
       <div class="nav-wrapper ">
         <a href="/static" class="brand-logo grey-text">Grepp</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down grey-text">
+        <ul sec:authorize="isAnonymous()" id="nav-mobile" class="right hide-on-med-and-down grey-text">
           <li><a href="/member/signin" class="grey-text">sign in</a></li>
           <li><a href="/member/signup" class="grey-text">sign up</a></li>
           <li>
@@ -39,6 +39,18 @@
             </a>
           </li>
         </ul>
+
+        <ul sec:authorize="isAuthenticated()" id="nav-mobile" class="right hide-on-med-and-down grey-text">
+          <li><a href="/member/mypage" class="grey-text">mypage</a></li>
+          <li><a href="/logout" class="grey-text" id="logout">logout</a></li>
+          <li>
+            <a href="mobile.html">
+              <i class="material-icons grey-text sidenav-trigger"
+                 data-target="slide-out">more_vert</i>
+            </a>
+          </li>
+        </ul>
+
       </div>
     </nav>
   </header>
@@ -88,6 +100,15 @@
   </script>
 </th:block>
 
+<ul class="pagination" th:fragment="frg_pagination">
+  <li class="waves-effect">
+    <a th:href="@{${page.url()}(page=${page.prevPage()})}"><i class="material-icons">chevron_left</i></a></li>
+  <li class="waves-effect" th:each="num : ${#numbers.sequence(page.startNumber(), page.endNumber())}">
+    <a th:href="@{${page.url()}(page=${num})}" th:text="${num}">1</a></li>
+  <li class="waves-effect">
+    <a th:href="@{${page.url()}(page=${page.nextPage()})}"><i class="material-icons">chevron_right</i></a></li>
+</ul>
+
 
 <!-- footer -->
 <th:block th:fragment="frg_footer">
@@ -124,6 +145,25 @@
 </th:block>
 
 
+
+
+
+
+
+
+
+
+
+
+<!--<th:block th:fragment="frg_pagination">-->
+<!--  <ul class="pagination">-->
+<!--    <li class="waves-effect"><a th:href="@{ ${page.url()}(page=${page.prevPage()}) }"><i class="material-icons">chevron_left</i></a></li>-->
+<!--    <li th:each="num : ${#numbers.sequence(page.startNumber(), page.endNumber())}" class="waves-effect">-->
+<!--      <a th:href="@{ ${page.url()}(page=${num}) }" th:text="${num}">1</a></li>-->
+<!--    <li class="waves-effect"><a th:href="@{ ${page.url()}(page=${page.nextPage()}) }">-->
+<!--      <i class="material-icons">chevron_right</i></a></li>-->
+<!--  </ul>-->
+<!--</th:block>-->
 
 </body>
 </html>
