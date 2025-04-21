@@ -2,9 +2,9 @@ package com.grepp.spring.app.model.book;
 
 import com.grepp.spring.app.model.book.code.BookImgType;
 import com.grepp.spring.app.model.book.dto.BookDto;
-import com.grepp.spring.app.model.book.dto.BookImgDto;
 import com.grepp.spring.app.model.book.entity.Book;
 import com.grepp.spring.app.model.book.entity.BookImg;
+import com.grepp.spring.app.model.book.repository.BookRepository;
 import com.grepp.spring.infra.error.exceptions.CommonException;
 import com.grepp.spring.infra.response.ResponseCode;
 import com.grepp.spring.infra.util.file.FileDto;
@@ -14,6 +14,8 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -50,10 +52,8 @@ public class BookService {
                    .toList();
     }
     
-    public List<BookDto> findPaged(int page, int size) {
-        int start = (page-1) * size;
-        return bookRepository.findAll()
-                   .stream().map(e -> mapper.map(e, BookDto.class))
-                   .toList();
+    public Page<BookDto> findPaged(Pageable pageable) {
+        return bookRepository.findAll(pageable)
+                   .map(e -> mapper.map(e, BookDto.class));
     }
 }
