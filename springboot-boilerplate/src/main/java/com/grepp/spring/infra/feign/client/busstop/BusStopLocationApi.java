@@ -1,6 +1,7 @@
 package com.grepp.spring.infra.feign.client.busstop;
 
 import com.grepp.spring.infra.feign.client.busstop.dto.BusStopDocument;
+import com.grepp.spring.infra.feign.client.busstop.dto.BusStopResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface BusStopLocationApi {
     
     @GetMapping("{apiKey}/json/busStopLocationXyInfo/{startIndex}/{endIndex}")
-    BusStopDocument getBusStop(
+    BusStopResponse getBusStop(
         @PathVariable
         String apiKey,
         @PathVariable
@@ -17,6 +18,4 @@ public interface BusStopLocationApi {
         @PathVariable
         int endIndex
     );
-
-
 }
